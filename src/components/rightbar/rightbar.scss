@@ -1,0 +1,99 @@
+@import "../../styles/themeVariables.scss";
+
+.rightbar {
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    background-color: themed("bgSoft");
+    color: themed("textColor");
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      padding: 1rem;
+
+      span {
+        color: gray;
+        font-size: 1rem;
+      }
+
+      .item {
+        -webkit-box-shadow: 0px 0px 13px -7px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 13px -7px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 13px -7px rgba(0, 0, 0, 0.75);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: themed("bgColor");
+        
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1rem 0rem;
+          position: relative;
+
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            img {
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .onlineDot {
+              width: 0.6rem;
+              height: 0.6rem;
+              background-color: green;
+              border-radius: 50%;
+              position: absolute;
+              top: 0;
+              left: 1.5rem;
+              border: 0.1rem solid white;
+            }
+            p {
+              color: themed("textSoft");
+              font-size: 0.8rem;
+             
+              span {
+                font-weight: bolder;
+                color: themed("textColor");
+                font-size: 1rem;
+              }
+            }
+            
+          }
+          span{
+            font-size: .6rem;
+          }
+          .buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+
+            button {
+              border: none;
+              padding: 0.2rem;
+              outline: none;
+              color: white;
+
+              &:first-child {
+                background-color: rgb(93, 150, 236);
+              }
+
+              &:last-child {
+                background-color: rgb(250, 155, 155);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

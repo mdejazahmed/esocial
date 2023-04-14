@@ -1,0 +1,71 @@
+@import "../../styles/themeVariables.scss";
+
+.post {
+ @include themify($themes){
+    -webkit-box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.75);
+    border-radius: 1rem;
+    background-color: themed("bgColor");
+    color: themed("textColor");
+
+
+  .container{
+    padding: 1rem;
+  
+  .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .userInfo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .userDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            font-weight: 500;
+        }
+        span {
+            font-size: .8rem;
+        }
+      }
+    }
+  }
+
+  .content{
+margin: 1rem 0rem;
+    p{}
+    img{
+        width: 100%;
+        max-height:500px;
+        margin-top:1rem;
+    }
+  }
+
+  .interaction{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .item{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap:.2rem;
+        font-size: .8rem;
+    }
+  }
+}
+}
+}
+
